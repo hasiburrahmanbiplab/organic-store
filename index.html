@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,13 +25,54 @@
           }
         }
         </script>
-      <style type="text/tailwindcss"></style>
+      <style type="text/tailwindcss">
+        @layer components{
+          .container{
+            margin: 0 auto;
+            padding: 0 10px;
+            border: 1px solid red;
+          }
+          .nav-link{
+            @apply text-base font-medium text-gray-400 capitalize;
+          }
+        }
+      </style>
 </head>
 <body class="font-manrope">
-    <header class="bg-white">
+    <header class="bg-slate-300 py-4">
       <div class="container">
-
+         <nav class="flex justify-between">
+           <div class="logo">
+             <img src="images/logo-white.png" class="w-36 max-w-full" alt="">
+           </div>
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Everythink</a></li>
+             <li><a href="#">Groceries</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact</a></li>
+           </ul>
+           <div class="icon">
+            <button>
+              $10.00
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-user" style="color: #000000;"></i>
+            </button>
+           </div>
+         </nav>
       </div>
     </header>
+
+
+
+
+
+
+
+
+    <!-- font-awesome link js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
