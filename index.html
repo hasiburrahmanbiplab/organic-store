@@ -23,7 +23,7 @@
               }
             }
           }
-        }
+        };
         </script>
       <style type="text/tailwindcss">
         @layer components{
@@ -33,35 +33,60 @@
             border: 1px solid red;
           }
           .nav-link{
-            @apply text-base font-medium text-gray-400 capitalize;
+            @apply text-base font-medium text-gray-600 capitalize;
           }
+          .nav{
+            position: absolute;
+            left: -200%;
+            transition: all linear ease-in-out;
+            transition-duration: 2s;
+            width: 100%;
+          }
+          .active{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            left: 0 !important;
+            transition: all linear ease-in-out;
+            transition-duration: 1s;
+          }
+         
         }
       </style>
 </head>
 <body class="font-manrope">
-    <header class="bg-slate-300 py-4">
-      <div class="container">
-         <nav class="flex justify-between">
-           <div class="logo">
-             <img src="images/logo-white.png" class="w-36 max-w-full" alt="">
-           </div>
-           <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">Everythink</a></li>
-             <li><a href="#">Groceries</a></li>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Contact</a></li>
-           </ul>
-           <div class="icon">
-            <button>
-              $10.00
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            <button>
-              <i class="fa-solid fa-user" style="color: #000000;"></i>
-            </button>
-           </div>
-         </nav>
+    <header class="py-4">
+      <div class="container p-0">
+      <div class="navbar flex items-start justify-end relative">
+        <nav class="nav flex flex-col gap-12 lg:gap-8 items-center justify-between flex-grow lg:flex-row lg:relative lg:left-0 lg:duration-0 bg-white">
+          <div class="logo">
+            <a href="#">
+             <img src="images/logo.svg" class="w-36 max-w-full" alt="">
+            </a>
+          </div>
+          <ul class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Everythink</a></li>
+            <li><a href="#" class="nav-link">Groceries</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="icon space-x-3">
+           <button class="text-green-800 font-bold">
+             $10.00
+             <i class="fa-solid fa-cart-shopping"></i>
+           </button>
+           <button>
+             <i class="fa-solid fa-user" style="color: #000000;"></i>
+           </button>
+          </div>
+        </nav>
+        <div class="hamburger lg:hidden absolute right-0 top-1">
+          <button>
+            <i class="fa-solid fa-bars fa-xl" style="color: #75777a;"></i>
+          </button>
+        </div>
+      </div>
       </div>
     </header>
 
@@ -74,5 +99,6 @@
 
     <!-- font-awesome link js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
 </html>
