@@ -36,7 +36,7 @@
             @apply text-base font-medium text-gray-600 capitalize;
           }
           .section-h1{
-            @apply text-5xl font-extrabold text-black capitalize leading-tight;
+            @apply text-5xl font-extrabold text-black capitalize leading-[55px];
           }
           .section-h2{
             @apply text-3xl font-extrabold text-white capitalize leading-tight;
@@ -48,7 +48,10 @@
             @apply text-xl font-bold text-black
           }
           .section-p{
-            @apply text-base font-medium leading-normal;
+            @apply text-base font-medium leading-normal py-4;
+          }
+          .btn-green{
+            @apply bg-green-800 text-white text-base font-bold capitalize flex gap-2  rounded-lg items-center justify-center px-5 py-4;
           }
           .nav{
             position: absolute;
@@ -112,16 +115,20 @@
     <!-- header section end -->
     <!-- banner section start -->
      <section id="banner" class=" my-16px lg:my-20 pt-11 lg:pt-0">
-       <div class="w-full h-full bg-opacity-90 bg-slate-100">
+       <div class="w-full h-full bg-opacity-85 bg-slate-100">
         <div class="container">
-          <div class="banner-container lg:w-9/12 grid grid-cols-2 mx-auto">
+          <div class="banner-container lg:w-9/12 grid grid-cols-2 mx-auto items-center justify-center gap-8">
             <div class="banner-image">
               <img src="images/bannerbg.png" alt="">
             </div>
-            <div class="banner-text bg-gray-200">
-              <span class="text-black text-xs font-semibold capitalize">Best quality products</span>
-              <h1>Join the organic movements!</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident obcaecati, explicabo qui repellat vero?</p>
+            <div class="banner-text flex flex-col">
+              <span class="text-black text-xs font-semibold capitalize mb-3 block">Best quality products</span>
+              <h1 class="section-h1">Join the organic movements!</h1>
+              <p class="section-p text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident obcaecati, explicabo qui repellat vero?</p>
+              <button class="btn-green self-end">
+                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                Shop Now
+              </button>
             </div>
           </div>
         </div>
