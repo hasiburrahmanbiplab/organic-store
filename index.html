@@ -20,7 +20,7 @@
               },
               fontFamily:{
                 manrope: 'Manrope',
-              }
+              },
             }
           }
         };
@@ -35,11 +35,24 @@
           .nav-link{
             @apply text-base font-medium text-gray-600 capitalize;
           }
+          .section-h1{
+            @apply text-5xl font-extrabold text-black capitalize leading-tight;
+          }
+          .section-h2{
+            @apply text-3xl font-extrabold text-white capitalize leading-tight;
+          }
+          .section-h3{
+            @apply text-2xl font-bold text-black capitalize leading-tight
+          }
+          .section-h5{
+            @apply text-xl font-bold text-black
+          }
+          .section-p{
+            @apply text-base font-medium leading-normal;
+          }
           .nav{
             position: absolute;
             left: -200%;
-            transition: all linear ease-in-out;
-            transition-duration: 2s;
             width: 100%;
           }
           .active{
@@ -50,13 +63,20 @@
             transition: all linear ease-in-out;
             transition-duration: 1s;
           }
+          #banner{
+            background-image: url(./images/leaf01.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
          
         }
       </style>
 </head>
 <body class="font-manrope">
+  <!-- header section start -->
     <header class="py-4">
-      <div class="container p-0">
+      <div class="lg:container p-0 lg:px-[10px]">
       <div class="navbar flex items-start justify-end relative">
         <nav class="nav flex flex-col gap-12 lg:gap-8 items-center justify-between flex-grow lg:flex-row lg:relative lg:left-0 lg:duration-0 bg-white">
           <div class="logo">
@@ -81,7 +101,7 @@
            </button>
           </div>
         </nav>
-        <div class="hamburger lg:hidden absolute right-0 top-1">
+        <div class="hamburger lg:hidden absolute right-[3%] top-1">
           <button>
             <i class="fa-solid fa-bars fa-xl" style="color: #75777a;"></i>
           </button>
@@ -89,6 +109,25 @@
       </div>
       </div>
     </header>
+    <!-- header section end -->
+    <!-- banner section start -->
+     <section id="banner" class=" my-16px lg:my-20 pt-11 lg:pt-0">
+       <div class="w-full h-full bg-opacity-90 bg-slate-100">
+        <div class="container">
+          <div class="banner-container lg:w-9/12 grid grid-cols-2 mx-auto">
+            <div class="banner-image">
+              <img src="images/bannerbg.png" alt="">
+            </div>
+            <div class="banner-text bg-gray-200">
+              <span class="text-black text-xs font-semibold capitalize">Best quality products</span>
+              <h1>Join the organic movements!</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident obcaecati, explicabo qui repellat vero?</p>
+            </div>
+          </div>
+        </div>
+       </div>
+     </section>
+    <!-- banner section end -->
 
 
 
