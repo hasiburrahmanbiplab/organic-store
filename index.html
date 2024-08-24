@@ -36,7 +36,7 @@
             @apply text-base font-medium text-gray-600 capitalize;
           }
           .section-h1{
-            @apply text-5xl font-extrabold text-black capitalize leading-[55px];
+            @apply text-5xl font-extrabold text-black capitalize leading-tight;
           }
           .section-h2{
             @apply text-3xl font-extrabold text-white capitalize leading-tight;
@@ -81,7 +81,7 @@
     <header class="py-4">
       <div class="lg:container p-0 lg:px-[10px]">
       <div class="navbar flex items-start justify-end relative">
-        <nav class="nav flex flex-col gap-12 lg:gap-8 items-center justify-between flex-grow lg:flex-row lg:relative lg:left-0 lg:duration-0 bg-white">
+        <nav class="nav flex flex-col gap-12 lg:gap-8 items-center justify-between flex-grow lg:flex-row lg:relative lg:left-0 lg:duration-0 bg-white p-8 lg:p-0">
           <div class="logo">
             <a href="#">
              <img src="images/logo.svg" class="w-36 max-w-full" alt="">
@@ -117,14 +117,14 @@
      <section id="banner" class=" my-16px lg:my-20 pt-11 lg:pt-0">
        <div class="w-full h-full bg-opacity-85 bg-slate-100">
         <div class="container">
-          <div class="banner-container lg:w-9/12 grid grid-cols-2 mx-auto items-center justify-center gap-8">
+          <div class="banner-container lg:w-9/12 grid lg:grid-cols-2 mx-auto items-center justify-center gap-8">
             <div class="banner-image">
               <img src="images/bannerbg.png" alt="">
             </div>
             <div class="banner-text flex flex-col">
               <span class="text-black text-xs font-semibold capitalize mb-3 block">Best quality products</span>
-              <h1 class="section-h1">Join the organic movements!</h1>
-              <p class="section-p text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident obcaecati, explicabo qui repellat vero?</p>
+              <h1 class="section-h1 text-4xl">Join the organic <span class="sm:block">movements!</span></h1>
+              <p class="section-p text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="sm:block md:inline">Ad provident obcaecati, explicabo qui repellat vero?</span></p>
               <button class="btn-green self-end">
                 <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                 Shop Now
